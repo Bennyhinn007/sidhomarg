@@ -7,6 +7,8 @@ import { founderEvents } from "@/data/photos";
 import { Container, PageHead, Panel, Pill } from "@/components/sections/primitives";
 import { AaaPillars } from "@/components/sections/aaa-pillars";
 import { PhotoGrid } from "@/components/sections/photo-grid";
+import { RecentWorks } from "@/components/sections/recent-works";
+import { Volunteers } from "@/components/sections/volunteers";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/about">): Promise<Metadata> {
   const { locale } = await params;
@@ -58,7 +60,27 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
         </section>
       </Container>
 
-      <Panel aria-labelledby="corner-title" className="mt-6">
+      <Container className="py-10">
+        <section aria-labelledby="works-title">
+          <Pill tone="amber">{t("worksPill")}</Pill>
+          <h2 id="works-title" className="mt-3 text-[clamp(1.9rem,5.5vw,2.7rem)]">{t("worksTitle")}</h2>
+          <p className="mt-3 mb-8 max-w-[36em] text-[1.05rem] text-ink/85">{t("worksIntro")}</p>
+          <RecentWorks />
+        </section>
+      </Container>
+
+      <Panel aria-labelledby="volunteers-title" className="mt-2">
+        <Container>
+          <Pill>{t("volunteersPill")}</Pill>
+          <h2 id="volunteers-title" className="mt-3 text-[clamp(1.9rem,5.5vw,2.7rem)]">
+            {t("volunteersTitle")}
+          </h2>
+          <p className="mt-3 mb-8 max-w-[36em] text-[1.05rem] text-ink/85">{t("volunteersIntro")}</p>
+          <Volunteers />
+        </Container>
+      </Panel>
+
+      <Panel aria-labelledby="corner-title" className="mt-8">
         <Container>
           <Pill>{t("cornerPill")}</Pill>
           <h2 id="corner-title" className="mt-3 max-w-[16em] text-[clamp(1.9rem,5.5vw,2.7rem)]">
