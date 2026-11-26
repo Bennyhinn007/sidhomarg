@@ -44,7 +44,7 @@ export function BottomNav() {
                   href={item.href}
                   aria-current={current ? "page" : undefined}
                   className={cn(
-                    "flex min-h-14 flex-col items-center justify-center gap-0.5 rounded-full px-0 text-center text-[0.68rem] leading-tight font-semibold tracking-tight sm:text-[0.75rem] transition-colors",
+                    "flex min-h-14 flex-col items-center justify-center gap-0.5 rounded-full px-0 text-center text-[0.72rem] leading-tight font-semibold sm:text-[0.78rem] transition-colors",
                     current ? "text-ink" : "text-sand hover:text-cream"
                   )}
                 >
@@ -56,7 +56,7 @@ export function BottomNav() {
                   <span
                     className={
                       kn
-                        ? "max-w-full text-[0.62rem] leading-[1.1] tracking-tight break-words sm:text-[0.7rem]"
+                        ? "max-w-full text-[0.66rem] leading-[1.1] break-words sm:text-[0.72rem]"
                         : "max-w-full truncate"
                     }
                   >

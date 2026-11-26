@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowRight, ArrowUp } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { navItems } from "@/data/nav";
+import { footerItems } from "@/data/nav";
 import { site, type SocialNetwork } from "@/lib/site";
 import { socialIcons, socialNames } from "@/components/icons/social-icons";
 import { VisitCounter } from "./visit-counter";
@@ -60,7 +60,7 @@ export async function SiteFooter() {
 
           <nav aria-label={t("links")}>
             <ul className="flex flex-wrap gap-x-6 gap-y-1">
-              {navItems.map((item) => (
+              {footerItems.map((item) => (
                 <li key={item.key}>
                   <Link
                     href={item.href}

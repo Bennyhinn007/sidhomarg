@@ -17,10 +17,10 @@ export type NavItem = {
 };
 
 /**
- * Order used by the bottom bar, the desktop bar, the footer and the sitemap.
- * Careers sits between About and Contact; Contact stays last.
+ * Every page of the site, in display order. Used by the footer links and the sitemap.
+ * Contact stays last.
  */
-export const navItems: NavItem[] = [
+export const pages: NavItem[] = [
   { key: "home", href: "/", icon: House },
   { key: "gallery", href: "/gallery", icon: Images },
   { key: "volunteer", href: "/volunteer", icon: HeartHandshake },
@@ -29,4 +29,14 @@ export const navItems: NavItem[] = [
   { key: "contact", href: "/contact", icon: Mail },
 ];
 
-export const routes = navItems.map((item) => item.href);
+/** Pages linked only from the footer, not from the top bar or the mobile bottom bar. */
+const footerOnly: NavKey[] = ["careers"];
+
+/** Main navigation: the desktop top bar and the mobile bottom bar. */
+export const navItems: NavItem[] = pages.filter((p) => !footerOnly.includes(p.key));
+
+/** Footer links: all pages. */
+export const footerItems: NavItem[] = pages;
+
+/** All routes, for the sitemap. */
+export const routes = pages.map((item) => item.href);
