@@ -27,7 +27,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <Panel aria-labelledby="founders-title">
         <Container>
           <Pill>{t("leadership")}</Pill>
-          <h2 id="founders-title" className="mt-3 mb-8 text-[clamp(1.9rem,5.5vw,2.7rem)]">
+          <h2 id="founders-title" className="mt-3 mb-8 text-[clamp(1.5rem,5.4vw,2.7rem)]">
             {t("founderTitle")}
           </h2>
           <FounderProfile />

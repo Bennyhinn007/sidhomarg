@@ -33,9 +33,9 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
     <>
       <PageHead pill={t("pill")} title={t("title")} />
 
-      <Container className="grid gap-10 py-10 lg:grid-cols-[1.3fr_1fr]">
+      <Container className="grid gap-8 py-8 sm:py-10 lg:grid-cols-[1.3fr_1fr] lg:gap-10">
         <div>
-          <p className="text-[1.3rem] leading-relaxed font-semibold text-walnut">{t("text")}</p>
+          <p className="text-[1.1rem] leading-relaxed font-semibold text-walnut sm:text-[1.3rem]">{t("text")}</p>
 
           <section aria-labelledby="motto-title" className="mt-8 border-l-4 border-amber pl-4">
             <h2 id="motto-title" className="text-xl">{t("mottoTitle")}</h2>
@@ -61,11 +61,11 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
         </section>
       </Container>
 
-      <Container className="py-10">
+      <Container className="py-8 sm:py-10">
         <section aria-labelledby="works-title">
           <Pill tone="amber">{t("worksPill")}</Pill>
-          <h2 id="works-title" className="mt-3 text-[clamp(1.9rem,5.5vw,2.7rem)]">{t("worksTitle")}</h2>
-          <p className="mt-3 mb-8 max-w-[36em] text-[1.05rem] text-ink/85">{t("worksIntro")}</p>
+          <h2 id="works-title" className="mt-3 text-[clamp(1.5rem,5.4vw,2.7rem)]">{t("worksTitle")}</h2>
+          <p className="mt-2 mb-6 max-w-[36em] text-base sm:mb-8 sm:text-[1.05rem] text-ink/85">{t("worksIntro")}</p>
           <RecentWorks />
         </section>
       </Container>
@@ -73,10 +73,10 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
       <Panel aria-labelledby="members-title" className="mt-2">
         <Container>
           <Pill>{t("membersPill")}</Pill>
-          <h2 id="members-title" className="mt-3 text-[clamp(1.9rem,5.5vw,2.7rem)]">
+          <h2 id="members-title" className="mt-3 text-[clamp(1.5rem,5.4vw,2.7rem)]">
             {t("membersTitle")}
           </h2>
-          <p className="mt-3 mb-8 max-w-[36em] text-[1.05rem] text-ink/85">{t("membersIntro")}</p>
+          <p className="mt-2 mb-6 max-w-[36em] text-base sm:mb-8 sm:text-[1.05rem] text-ink/85">{t("membersIntro")}</p>
           <Members />
         </Container>
       </Panel>
@@ -84,10 +84,10 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
       <Panel aria-labelledby="volunteers-title" className="mt-8">
         <Container>
           <Pill>{t("volunteersPill")}</Pill>
-          <h2 id="volunteers-title" className="mt-3 text-[clamp(1.9rem,5.5vw,2.7rem)]">
+          <h2 id="volunteers-title" className="mt-3 text-[clamp(1.5rem,5.4vw,2.7rem)]">
             {t("volunteersTitle")}
           </h2>
-          <p className="mt-3 mb-8 max-w-[36em] text-[1.05rem] text-ink/85">{t("volunteersIntro")}</p>
+          <p className="mt-2 mb-6 max-w-[36em] text-base sm:mb-8 sm:text-[1.05rem] text-ink/85">{t("volunteersIntro")}</p>
           <Volunteers />
         </Container>
       </Panel>
@@ -95,10 +95,10 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
       <Panel aria-labelledby="corner-title" className="mt-8">
         <Container>
           <Pill>{t("cornerPill")}</Pill>
-          <h2 id="corner-title" className="mt-3 max-w-[16em] text-[clamp(1.9rem,5.5vw,2.7rem)]">
+          <h2 id="corner-title" className="mt-3 max-w-[16em] text-[clamp(1.5rem,5.4vw,2.7rem)]">
             {t("cornerTitle")}
           </h2>
-          <p className="mt-3 mb-8 max-w-[36em] text-[1.05rem] text-ink/85">{t("cornerIntro")}</p>
+          <p className="mt-2 mb-6 max-w-[36em] text-base sm:mb-8 sm:text-[1.05rem] text-ink/85">{t("cornerIntro")}</p>
           <PhotoGrid photos={founderEvents} emptyText={t("cornerEmpty")} staggered />
         </Container>
       </Panel>

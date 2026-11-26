@@ -31,7 +31,7 @@ export function LanguageSwitcher() {
                 lang={l}
                 aria-current={current ? "true" : undefined}
                 className={cn(
-                  "inline-flex min-h-11 min-w-11 items-center justify-center rounded-full px-2.5 text-[0.9rem] sm:px-3.5 font-bold transition-colors",
+                  "inline-flex min-h-10 min-w-11 items-center justify-center rounded-full px-2.5 text-[0.85rem] font-bold transition-colors sm:min-h-11 sm:px-3.5 sm:text-[0.9rem]",
                   current ? "bg-walnut text-cream" : "text-ink hover:bg-paper"
                 )}
               >

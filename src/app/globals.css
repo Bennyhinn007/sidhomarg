@@ -109,10 +109,13 @@
 
 @layer base {
   html {
-    /* 17px base: easier reading for older visitors, still scales with browser zoom */
-    font-size: 106.25%;
+    /* 16px on phones (the standard mobile size), 17px from tablets up (see below) */
+    font-size: 100%;
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+  }
+  @media (min-width: 48rem) {
+    html { font-size: 106.25%; }
   }
 
   body {
@@ -138,7 +141,7 @@
   /* Kannada: dedicated font, no negative tracking, taller lines for vowel signs */
   html:lang(kn) body {
     font-family: var(--font-kannada);
-    line-height: 1.8;
+    line-height: 1.7;
   }
   /* Balanced/pretty wrapping is very slow for Kannada shaping on low-end phones. */
   html:lang(kn) p,
@@ -152,7 +155,7 @@
   html:lang(kn) h3 {
     font-weight: 700;
     letter-spacing: 0;
-    line-height: 1.4;
+    line-height: 1.35;
   }
   html:lang(kn) .tracking-label {
     letter-spacing: 0;
@@ -178,7 +181,7 @@
 
   /* The source logo is a 1280x640 image with white padding. This crops to the artwork. */
   .logo-crop {
-    --w: 8rem;
+    --w: 7.5rem;
     position: relative;
     display: block;
     width: var(--w);

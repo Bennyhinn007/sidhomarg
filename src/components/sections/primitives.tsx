@@ -19,7 +19,7 @@ export function Pill({ tone = "sage", children }: { tone?: PillTone; children: R
   return (
     <span
       className={cn(
-        "tracking-label inline-block rounded-full px-3.5 py-1.5 text-[0.8rem] font-bold",
+        "tracking-label inline-block rounded-full px-3 py-1 text-[0.75rem] font-bold sm:px-3.5 sm:py-1.5 sm:text-[0.8rem]",
         pillTones[tone]
       )}
     >
@@ -31,9 +31,9 @@ export function Pill({ tone = "sage", children }: { tone?: PillTone; children: R
 /** Heading block at the top of inner pages: pill + the page's single h1. */
 export function PageHead({ pill, title }: { pill: string; title: string }) {
   return (
-    <Container className="pt-10 sm:pt-14">
+    <Container className="pt-7 sm:pt-14">
       <Pill tone="amber">{pill}</Pill>
-      <h1 className="mt-4 max-w-[16em] text-[clamp(2rem,6.5vw,3.4rem)]">{title}</h1>
+      <h1 className="mt-3 max-w-[16em] text-[clamp(1.65rem,6.2vw,3.4rem)] sm:mt-4">{title}</h1>
     </Container>
   );
 }
@@ -46,7 +46,7 @@ export function Panel({
 }: React.ComponentProps<"section">) {
   return (
     <section
-      className={cn("mx-3 rounded-[var(--radius-panel)] bg-sage-tint/70 py-12 sm:mx-5 sm:py-16", className)}
+      className={cn("mx-2 rounded-[1.5rem] bg-sage-tint/70 py-9 sm:mx-5 sm:rounded-[var(--radius-panel)] sm:py-16", className)}
       {...props}
     >
       {children}

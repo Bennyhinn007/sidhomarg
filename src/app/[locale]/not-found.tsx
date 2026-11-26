@@ -7,7 +7,7 @@ export default async function NotFound() {
 
   return (
     <Container className="grid min-h-[50vh] place-content-center gap-6 py-16 text-center">
-      <h1 className="text-[clamp(1.8rem,6vw,2.8rem)]">{t("title")}</h1>
+      <h1 className="text-[clamp(1.5rem,6vw,2.8rem)]">{t("title")}</h1>
       <p>
         <Link
           href="/"

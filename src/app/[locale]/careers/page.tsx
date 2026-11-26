@@ -49,7 +49,7 @@ export default async function CareersPage({ params }: PageProps<"/[locale]/caree
         <p className="max-w-[40em] text-[1.08rem] text-ink/85">{t("intro")}</p>
       </Container>
 
-      <Container className="py-10">
+      <Container className="py-8 sm:py-10">
         <h2 id="roles-title" className="mb-5 text-2xl">{t("rolesTitle")}</h2>
         <ul aria-labelledby="roles-title" className="grid gap-4 md:grid-cols-3 md:gap-5">
           {careerRoles.map(({ key, subjectTitle, icon: Icon }) => {
@@ -59,12 +59,12 @@ export default async function CareersPage({ params }: PageProps<"/[locale]/caree
               <li key={key} className="flex">
                 <article
                   aria-labelledby={titleId}
-                  className="flex w-full flex-col rounded-[var(--radius-card)] border border-line bg-paper p-6 transition hover:-translate-y-1 hover:shadow-[var(--shadow-lift)] sm:p-7"
+                  className="flex w-full flex-col rounded-[var(--radius-card)] border border-line bg-paper p-5 transition hover:-translate-y-1 hover:shadow-[var(--shadow-lift)] sm:p-7"
                 >
-                  <span className="grid size-14 place-items-center rounded-2xl bg-walnut text-cream">
+                  <span className="grid size-12 place-items-center rounded-2xl bg-walnut text-cream sm:size-14">
                     <Icon aria-hidden="true" className="size-7" strokeWidth={1.8} />
                   </span>
-                  <h3 id={titleId} className="mt-5 text-[1.45rem] leading-snug">{title}</h3>
+                  <h3 id={titleId} className="mt-4 text-[1.25rem] leading-snug sm:mt-5 sm:text-[1.45rem]">{title}</h3>
                   <p className="mt-2 flex-1 text-[1.03rem] text-ink/85">{t(`roles.${key}.description`)}</p>
 
                   {email ? (

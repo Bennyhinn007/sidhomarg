@@ -19,7 +19,7 @@ export async function SiteFooter() {
   const anySocial = networks.some((n) => site.social[n]);
 
   return (
-    <footer className="mt-16 overflow-hidden bg-walnut pb-32 text-sand lg:pb-6">
+    <footer className="mt-12 overflow-hidden sm:mt-16 bg-walnut pb-32 text-sand lg:pb-6">
       <div className="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <span className="inline-flex items-center gap-2 text-base text-cream">
@@ -35,14 +35,14 @@ export async function SiteFooter() {
           </a>
         </div>
 
-        <section aria-labelledby="footer-about" className="mt-10 max-w-3xl">
-          <h2 id="footer-about" className="text-3xl font-light text-cream sm:text-5xl">
+        <section aria-labelledby="footer-about" className="mt-7 max-w-3xl sm:mt-10">
+          <h2 id="footer-about" className="text-[1.65rem] font-light text-cream sm:text-5xl">
             {t("aboutTitle")}
           </h2>
-          <p className="mt-4 text-[1.02rem] leading-relaxed text-sand">{t("aboutText")}</p>
+          <p className="mt-3 text-[0.97rem] leading-relaxed text-sand sm:mt-4 sm:text-[1.02rem]">{t("aboutText")}</p>
         </section>
 
-        <div className="mt-14 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <div className="mt-10 flex flex-col gap-6 sm:mt-14 sm:gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-base text-sand/90">{t("reach")}</p>
             {email ? (
