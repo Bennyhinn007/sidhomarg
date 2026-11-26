@@ -30,6 +30,7 @@ npm run dev                  # http://localhost:3000
 | Gallery | `/gallery` | `/kn/gallery` |
 | Volunteer | `/volunteer` | `/kn/volunteer` |
 | About (with Founders Corner) | `/about` | `/kn/about` |
+| Careers | `/careers` | `/kn/careers` |
 | Contact | `/contact` | `/kn/contact` |
 
 - English is the default and has no prefix. Kannada uses `/kn`.
@@ -49,6 +50,8 @@ npm run dev                  # http://localhost:3000
 | Members | `src/data/members.ts` |
 | Founders Corner photos | `public/photos/events/` + `founderEvents` in `src/data/photos.ts` |
 | Gallery photos | `public/photos/gallery/` + `galleryPhotos` in `src/data/photos.ts` |
+| Recruitment email (Apply Now buttons) | `src/lib/site.ts` → `recruitmentEmail` |
+| Career roles | `src/data/careers.ts` + `Careers.roles` in `messages/*.json` |
 | Navigation order | `src/data/nav.ts` |
 
 Anything left as `null` or an empty list shows a clear "to be added" placeholder.
@@ -60,6 +63,26 @@ The contact and volunteer forms are **demos**. They validate input and then tell
 visitor plainly that nothing was sent. To make them real, replace the `onSubmit`
 handler in `src/components/forms/demo-form.tsx` (for example with a Server Action
 that sends an email) and remove the demo notice text in `messages/*.json`.
+
+## Careers
+
+Each role card has an **Apply Now** `mailto:` link to `site.recruitmentEmail`. The subject is
+`Application for <Role> | Sidhomarg Foundation` (always English, so the inbox can be filtered),
+and the body is a short template in the visitor's language asking for full name, contact number,
+qualifications, experience and portfolio/LinkedIn, with a reminder to attach a CV.
+While `recruitmentEmail` is `null` the buttons show "Email coming soon" instead.
+
+## Visit counter
+
+The footer shows the total number of website visits, shared by English and Kannada pages.
+
+- Storage: Upstash Redis, set `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` (server-side only).
+- `POST /api/visit` counts a new browsing session; `GET /api/visit` only reads the total.
+- A visit is counted once per session: a `sessionStorage` flag stops repeat requests, an httpOnly
+  `sm_visit` cookie stops repeat counting, and Redis remembers a hash of IP + browser for 30 minutes
+  (raw IPs are never stored). The increment is a single atomic Redis script.
+- Bots, link previews, prefetches and cross-site requests are not counted.
+- If the variables are missing or Redis is down, the counter is simply hidden. Pages still load.
 
 ## Project structure
 
@@ -77,9 +100,10 @@ src/
     forms/                demo form + field definitions
     seo/                  NGO structured data (JSON-LD)
     ui/                   shadcn/ui components
-  data/                   members, photos, navigation
+  data/                   members, photos, careers, navigation
   i18n/                   next-intl routing, navigation, request config
-  lib/                    site config, SEO helpers, utils
+  lib/                    site config, SEO helpers, mailto helper, visit counter, utils
+  app/api/visit/          visit counter endpoint
   proxy.ts                language routing (Next.js 16 "proxy", formerly middleware)
 ```
 

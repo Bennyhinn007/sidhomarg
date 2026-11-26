@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { navItems } from "@/data/nav";
 import { site, type SocialNetwork } from "@/lib/site";
 import { socialIcons, socialNames } from "@/components/icons/social-icons";
+import { VisitCounter } from "./visit-counter";
 
 const networks = Object.keys(site.social) as SocialNetwork[];
 
@@ -97,7 +98,10 @@ export async function SiteFooter() {
       </div>
 
       <div className="mx-auto mt-4 flex max-w-6xl flex-wrap items-center justify-between gap-4 border-t border-cream/15 px-5 pt-5 sm:px-8">
-        <p className="text-[0.95rem] text-sand/90">{t("copyright", { year })}</p>
+        <div className="grid gap-1">
+          <p className="text-[0.95rem] text-sand/90">{t("copyright", { year })}</p>
+          <VisitCounter label={t("visits")} locale={locale} />
+        </div>
 
         <div>
           <ul

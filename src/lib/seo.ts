@@ -6,7 +6,7 @@ import type { NavItem } from "@/data/nav";
 import { site, siteUrl } from "./site";
 
 type Href = NavItem["href"];
-export type PageKey = "home" | "gallery" | "volunteer" | "about" | "contact";
+export type PageKey = NavItem["key"];
 
 const ogLocale: Record<Locale, string> = { en: "en_IN", kn: "kn_IN" };
 

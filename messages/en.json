@@ -18,6 +18,10 @@
       "title": "About us and Founders Corner",
       "description": "Learn about Sidhomarg Foundation, its founder Siddrameshwar S. Wale and the Anna, Akshara, Arogya concept."
     },
+    "careers": {
+      "title": "Careers",
+      "description": "Work with Sidhomarg Foundation. Open roles: Social Media Manager, Website Manager and Legal Consultant."
+    },
     "contact": {
       "title": "Contact",
       "description": "Contact Sidhomarg Foundation."
@@ -33,6 +37,7 @@
     "gallery": "Gallery",
     "volunteer": "Volunteer",
     "about": "About",
+    "careers": "Careers",
     "contact": "Contact",
     "volunteerCta": "Volunteer",
     "homeLink": "Sidhomarg Foundation, home page",
@@ -114,6 +119,45 @@
     "cornerIntro": "Moments with the founder at events and community work.",
     "cornerEmpty": "Event photos of the founder will be added here."
   },
+  "Careers": {
+    "pill": "Careers",
+    "title": "Work with us for Anna, Akshara and Arogya.",
+    "intro": "Sidhomarg Foundation is looking for people who want to put their skills to work for the community. Choose a role below to apply by email.",
+    "rolesTitle": "Open roles",
+    "roles": {
+      "socialMedia": {
+        "title": "Social Media Manager",
+        "description": "Share the Foundation's work, events and stories on social media, and help more people learn about Anna, Akshara and Arogya."
+      },
+      "website": {
+        "title": "Website Manager",
+        "description": "Keep this website up to date in English and Kannada, add photos and news from the field, and make sure it works well for every visitor."
+      },
+      "legal": {
+        "title": "Legal Consultant",
+        "description": "Advise the Foundation on legal and compliance matters so that its work stays on a sound footing."
+      }
+    },
+    "apply": "Apply Now",
+    "applyLabel": "Apply for {role} by email. Opens your email app.",
+    "unavailable": "Email coming soon",
+    "unavailableNote": "The recruitment email address will be added soon. Please check back later.",
+    "howTitle": "How to apply",
+    "how1": "Press Apply Now on the role you want. Your email app opens with the subject and a short form already filled in.",
+    "how2": "Fill in your details in the email.",
+    "how3": "Attach your CV before you press send.",
+    "attachReminder": "Remember to attach your CV before sending the email.",
+    "orEmail": "No email app on this device? Send your CV and details to <link>{email}</link> with the role name in the subject.",
+    "emailGreeting": "Dear Sidhomarg Foundation team,",
+    "emailIntro": "I would like to apply for the role of {role}.",
+    "emailName": "Full name:",
+    "emailPhone": "Contact number:",
+    "emailEducation": "Educational qualifications:",
+    "emailExperience": "Relevant experience:",
+    "emailPortfolio": "Portfolio or LinkedIn URL:",
+    "emailCv": "[Please attach your CV to this email before sending.]",
+    "emailThanks": "Thank you."
+  },
   "Contact": {
     "pill": "Contact",
     "title": "Write to us, or visit us.",
@@ -157,6 +201,7 @@
     "social": "Social media",
     "socialPending": "Social media links will be added soon.",
     "brand": "Sidhomarg",
+    "visits": "Website visits",
     "copyright": "© {year} Sidhomarg Foundation. All rights reserved."
   },
   "NotFound": {

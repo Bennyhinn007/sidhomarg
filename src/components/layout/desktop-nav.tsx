@@ -13,7 +13,7 @@ export function DesktopNav() {
 
   return (
     <nav aria-label={t("main")} className="hidden lg:block">
-      <ul className="flex items-center gap-1">
+      <ul className="flex items-center gap-0.5 xl:gap-1">
         {navItems.map((item, i) => {
           const current = i === active;
           return (
@@ -22,7 +22,7 @@ export function DesktopNav() {
                 href={item.href}
                 aria-current={current ? "page" : undefined}
                 className={cn(
-                  "relative inline-flex min-h-12 items-center rounded-full px-4 text-[0.95rem] font-semibold transition-colors",
+                  "relative inline-flex min-h-12 items-center rounded-full px-3 text-[0.95rem] font-semibold xl:px-4 transition-colors",
                   current
                     ? "bg-amber text-ink"
                     : "text-ink hover:bg-sage-tint"

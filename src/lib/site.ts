@@ -32,6 +32,12 @@ export const site = {
     linkedin: null as string | null,
   },
 
+  /**
+   * Official recruitment address used by every "Apply Now" button on /careers.
+   * While null, the buttons are shown as unavailable instead of using a made-up address.
+   */
+  recruitmentEmail: null as string | null, // e.g. "careers@example.org"
+
   founder: {
     /** Path inside /public, e.g. "/photos/founder.jpg". */
     photo: null as string | null,
