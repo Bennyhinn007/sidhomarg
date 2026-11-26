@@ -7,6 +7,7 @@ import { founderEvents } from "@/data/photos";
 import { Container, PageHead, Panel, Pill } from "@/components/sections/primitives";
 import { AaaPillars } from "@/components/sections/aaa-pillars";
 import { PhotoGrid } from "@/components/sections/photo-grid";
+import { Members } from "@/components/sections/members";
 import { RecentWorks } from "@/components/sections/recent-works";
 import { Volunteers } from "@/components/sections/volunteers";
 
@@ -69,7 +70,18 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
         </section>
       </Container>
 
-      <Panel aria-labelledby="volunteers-title" className="mt-2">
+      <Panel aria-labelledby="members-title" className="mt-2">
+        <Container>
+          <Pill>{t("membersPill")}</Pill>
+          <h2 id="members-title" className="mt-3 text-[clamp(1.9rem,5.5vw,2.7rem)]">
+            {t("membersTitle")}
+          </h2>
+          <p className="mt-3 mb-8 max-w-[36em] text-[1.05rem] text-ink/85">{t("membersIntro")}</p>
+          <Members />
+        </Container>
+      </Panel>
+
+      <Panel aria-labelledby="volunteers-title" className="mt-8">
         <Container>
           <Pill>{t("volunteersPill")}</Pill>
           <h2 id="volunteers-title" className="mt-3 text-[clamp(1.9rem,5.5vw,2.7rem)]">

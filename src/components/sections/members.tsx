@@ -17,21 +17,19 @@ function initials(name: string) {
     .toUpperCase();
 }
 
-/** Trust members. Reads src/data/members.ts; shows an honest placeholder while it is empty. */
+/** Trust members (About page). Reads src/data/members.ts; shows an honest placeholder while it is empty. */
 export async function Members() {
-  const t = await getTranslations("Home");
+  const t = await getTranslations("About");
   const locale = (await getLocale()) as Locale;
 
   return (
-    <section aria-labelledby="members-title" className="mt-12">
-      <h3 id="members-title" className="text-[1.45rem] text-walnut">{t("membersTitle")}</h3>
-
+    <div>
       {members.length === 0 ? (
-        <PendingBox label={t("membersEmpty")} className="mt-4 min-h-36 gap-2">
+        <PendingBox label={t("membersEmpty")} className="min-h-36 gap-2">
           <Users aria-hidden="true" className="size-7 text-field" />
         </PendingBox>
       ) : (
-        <ul className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {members.map((m, i) => (
             <li key={m.name.en}>
               <figure>
@@ -60,6 +58,6 @@ export async function Members() {
           ))}
         </ul>
       )}
-    </section>
+    </div>
   );
 }

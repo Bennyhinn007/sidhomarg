@@ -47,7 +47,7 @@ npm run dev                  # http://localhost:3000
 | Email, phone, address, office hours | `src/lib/site.ts` → `contact` |
 | Facebook / Twitter / Instagram / LinkedIn links | `src/lib/site.ts` → `social` |
 | Founder photo | Put the file in `public/photos/` and set `site.founder.photo` |
-| Members | `src/data/members.ts` |
+| About → Our members | `src/data/members.ts` |
 | Founders Corner photos | `public/photos/events/` + `founderEvents` in `src/data/photos.ts` |
 | About → Our recent works | `src/data/works.ts` (photos in `public/photos/works/`) |
 | About → Our volunteers | `src/data/volunteers.ts` (photos in `public/photos/volunteers/`) |

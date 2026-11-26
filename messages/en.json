@@ -62,9 +62,7 @@
     "missionTitle": "Our Mission",
     "missionText": "To provide food, education and healthcare to people in need, especially in rural and marginalised communities, and to help them build the skills to improve their lives.",
     "leadership": "Leadership",
-    "founderMembersTitle": "Founder & Members",
-    "membersTitle": "Our members",
-    "membersEmpty": "Member names and photos will be added soon."
+    "founderTitle": "Our Founder"
   },
   "Founder": {
     "role": "Founder",
@@ -118,6 +116,10 @@
     "worksTitle": "Our recent works",
     "worksIntro": "The latest food, education and health activities of Sidhomarg Foundation.",
     "worksEmpty": "Details of the Foundation's recent works will be added here soon.",
+    "membersPill": "Our team",
+    "membersTitle": "Our members",
+    "membersIntro": "The members of Sidhomarg Foundation.",
+    "membersEmpty": "Member names and photos will be added soon.",
     "volunteersPill": "Volunteers",
     "volunteersTitle": "Our volunteers",
     "volunteersIntro": "The people who give their time to Anna, Akshara and Arogya.",
