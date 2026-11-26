@@ -1,0 +1,211 @@
+{
+  "Meta": {
+    "siteName": "Sidhomarg Foundation",
+    "defaultDescription": "Sidhomarg Foundation works to provide food, education and healthcare (Anna, Akshara, Arogya) to people in need, especially in rural and marginalised communities.",
+    "home": {
+      "title": "Sidhomarg Foundation | Anna, Akshara, Arogya",
+      "description": "Sidhomarg Foundation works for a society free from hunger, illiteracy and ill health through food, education and healthcare."
+    },
+    "gallery": {
+      "title": "Gallery",
+      "description": "Photos from the activities of Sidhomarg Foundation."
+    },
+    "volunteer": {
+      "title": "Volunteer",
+      "description": "Volunteer with Sidhomarg Foundation and support food, education and healthcare work."
+    },
+    "about": {
+      "title": "About us and Founders Corner",
+      "description": "Learn about Sidhomarg Foundation, its founder Siddrameshwar S. Wale and the Anna, Akshara, Arogya concept."
+    },
+    "careers": {
+      "title": "Careers",
+      "description": "Work with Sidhomarg Foundation. Open roles: Social Media Manager, Website Manager and Legal Consultant."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact Sidhomarg Foundation."
+    },
+    "notFound": {
+      "title": "Page not found"
+    }
+  },
+  "Nav": {
+    "skip": "Skip to main content",
+    "main": "Main navigation",
+    "home": "Home",
+    "gallery": "Gallery",
+    "volunteer": "Volunteer",
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact",
+    "volunteerCta": "Volunteer",
+    "homeLink": "Sidhomarg Foundation, home page",
+    "language": "Choose language",
+    "english": "English",
+    "kannada": "ಕನ್ನಡ"
+  },
+  "Common": {
+    "placeholder": "To be added",
+    "photoComing": "Photo to be added"
+  },
+  "Home": {
+    "pill": "Sidhomarg Foundation",
+    "title": "Walking together toward <hl>well-being</hl>.",
+    "intro": "Food, education and healthcare for people in need, especially in rural and marginalised communities.",
+    "ctaVolunteer": "Become a volunteer",
+    "ctaStory": "Our story",
+    "logoAlt": "Sidhomarg Foundation logo",
+    "aaaLabel": "Our three pillars",
+    "visionTitle": "Our Vision",
+    "visionText": "A society free from hunger, illiteracy and ill health, where everyone can live a healthy and dignified life.",
+    "missionTitle": "Our Mission",
+    "missionText": "To provide food, education and healthcare to people in need, especially in rural and marginalised communities, and to help them build the skills to improve their lives.",
+    "leadership": "Leadership",
+    "founderMembersTitle": "Founder & Members",
+    "membersTitle": "Our members",
+    "membersEmpty": "Member names and photos will be added soon."
+  },
+  "Founder": {
+    "role": "Founder",
+    "name": "Siddrameshwar S. Wale",
+    "born": "Born in Bhalki",
+    "writer": "Writer",
+    "activist": "Activist",
+    "socialWorker": "Social Worker",
+    "educationalist": "Educationalist",
+    "motto": "“Sarve Janaha Sukhino Bhavantu”",
+    "mottoMeaning": "May all people be happy.",
+    "bio": "Guided by this motto, he wants a society free from hunger, illiteracy and ill health. That is why the “AAA” concept of Anna, Akshara and Arogya was founded by the founder of Sidhomarg.",
+    "photoAlt": "Portrait of Siddrameshwar S. Wale"
+  },
+  "AAA": {
+    "anna": "Anna",
+    "annaMeaning": "Food",
+    "akshara": "Akshara",
+    "aksharaMeaning": "Education",
+    "arogya": "Arogya",
+    "arogyaMeaning": "Health"
+  },
+  "Gallery": {
+    "pill": "Gallery",
+    "title": "Moments from the field.",
+    "empty": "Photos of the Trust's activities will be added here."
+  },
+  "Volunteer": {
+    "pill": "Volunteer",
+    "title": "Give your time to Anna, Akshara and Arogya.",
+    "step1Title": "Tell us about yourself.",
+    "step1Text": "Share your name, phone number and how you would like to help.",
+    "step2Title": "The Trust gets in touch.",
+    "step2Text": "A member of the Trust will contact you about upcoming work.",
+    "step3Title": "Join the work.",
+    "step3Text": "Help with food, education or health activities.",
+    "formTitle": "Volunteer form"
+  },
+  "About": {
+    "pill": "About",
+    "title": "About Sidhomarg Foundation",
+    "text": "We are a non-governmental organization that is committed to providing food, education, and healthcare to people in need, especially in rural and marginalized communities. We believe that everyone deserves to live a healthy and dignified life, regardless of their background or circumstances.",
+    "programsTitle": "Our programmes",
+    "programSchoolFeeding": "School feeding programmes",
+    "programLiteracy": "Adult literacy programmes",
+    "programHealth": "Mobile health clinics",
+    "programVocational": "Vocational training programmes",
+    "mottoTitle": "Our guiding motto",
+    "mottoText": "“Sarve Janaha Sukhino Bhavantu” means: may all people be happy.",
+    "cornerPill": "Founders Corner",
+    "cornerTitle": "Siddrameshwar S. Wale, in the field",
+    "cornerIntro": "Moments with the founder at events and community work.",
+    "cornerEmpty": "Event photos of the founder will be added here."
+  },
+  "Careers": {
+    "pill": "Careers",
+    "title": "Work with us for Anna, Akshara and Arogya.",
+    "intro": "Sidhomarg Foundation is looking for people who want to put their skills to work for the community. Choose a role below to apply by email.",
+    "rolesTitle": "Open roles",
+    "roles": {
+      "socialMedia": {
+        "title": "Social Media Manager",
+        "description": "Share the Foundation's work, events and stories on social media, and help more people learn about Anna, Akshara and Arogya."
+      },
+      "website": {
+        "title": "Website Manager",
+        "description": "Keep this website up to date in English and Kannada, add photos and news from the field, and make sure it works well for every visitor."
+      },
+      "legal": {
+        "title": "Legal Consultant",
+        "description": "Advise the Foundation on legal and compliance matters so that its work stays on a sound footing."
+      }
+    },
+    "apply": "Apply Now",
+    "applyLabel": "Apply for {role} by email. Opens your email app.",
+    "unavailable": "Email coming soon",
+    "unavailableNote": "The recruitment email address will be added soon. Please check back later.",
+    "howTitle": "How to apply",
+    "how1": "Press Apply Now on the role you want. Your email app opens with the subject and a short form already filled in.",
+    "how2": "Fill in your details in the email.",
+    "how3": "Attach your CV before you press send.",
+    "attachReminder": "Remember to attach your CV before sending the email.",
+    "orEmail": "No email app on this device? Send your CV and details to <link>{email}</link> with the role name in the subject.",
+    "emailGreeting": "Dear Sidhomarg Foundation team,",
+    "emailIntro": "I would like to apply for the role of {role}.",
+    "emailName": "Full name:",
+    "emailPhone": "Contact number:",
+    "emailEducation": "Educational qualifications:",
+    "emailExperience": "Relevant experience:",
+    "emailPortfolio": "Portfolio or LinkedIn URL:",
+    "emailCv": "[Please attach your CV to this email before sending.]",
+    "emailThanks": "Thank you."
+  },
+  "Contact": {
+    "pill": "Contact",
+    "title": "Write to us, or visit us.",
+    "detailsTitle": "Contact details",
+    "office": "Office address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Office hours",
+    "formTitle": "Send a message"
+  },
+  "Form": {
+    "demoTitle": "Demo form",
+    "demoText": "This form is not connected yet. Nothing you type here is sent to the Trust.",
+    "required": "Required",
+    "name": "Your name",
+    "fullName": "Full name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "message": "Message",
+    "help": "I would like to help with",
+    "helpAnna": "Anna (food)",
+    "helpAkshara": "Akshara (education)",
+    "helpArogya": "Arogya (health)",
+    "helpAny": "Anything that is needed",
+    "send": "Send message",
+    "join": "Submit volunteer form",
+    "errorName": "Please enter your name.",
+    "errorEmail": "Please enter a valid email address.",
+    "errorPhone": "Please enter a phone number with at least 10 digits.",
+    "errorMessage": "Please write a message.",
+    "errorSummary": "Please correct the highlighted fields.",
+    "notSent": "Not sent. This is a demo form and is not connected to the Trust yet. Please use the contact details on the Contact page instead."
+  },
+  "Footer": {
+    "badge": "Serving with dignity",
+    "toTop": "Back to top",
+    "aboutTitle": "About Us",
+    "aboutText": "We are a non-governmental organization that is committed to providing food, education, and healthcare to people in need, especially in rural and marginalized communities. We believe that everyone deserves to live a healthy and dignified life, regardless of their background or circumstances. We offer a variety of programs and services, including school feeding programs, adult literacy programs, mobile health clinics, and vocational training programs. Our programs are designed to help people meet their basic needs and to develop the skills and knowledge they need to improve their lives.",
+    "reach": "Reach out at:",
+    "links": "Footer navigation",
+    "social": "Social media",
+    "socialPending": "Social media links will be added soon.",
+    "brand": "Sidhomarg",
+    "visits": "Website visits",
+    "copyright": "© {year} Sidhomarg Foundation. All rights reserved."
+  },
+  "NotFound": {
+    "title": "This page could not be found.",
+    "back": "Go to the home page"
+  }
+}

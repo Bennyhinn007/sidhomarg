@@ -1,0 +1,228 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+  Sidhomarg brand palette
+  - cream   #FBF7EF  page background
+  - paper   #FFFDF8  cards and raised surfaces
+  - walnut  #5A3E2B  headings, header/footer surfaces
+  - ink     #3B2A1E  body text
+  - sage    #87A96B  borders, tints, secondary accents
+  - amber   #D5851F  active navigation, highlights, focus
+
+  Accessibility helpers (derived from the palette, used only where contrast requires it):
+  - amber-deep #8A500C  amber used as text on light backgrounds (5.3:1 or better on cream and amber tints)
+  - muted      #6B5A4B  secondary text (6.2:1 on cream)
+  - field      #8C7A69  form field borders (3.8:1 on cream, meets WCAG 1.4.11)
+  - danger     #A4271A  form error text and borders
+  White text is never placed on amber (2.9:1). Amber surfaces use ink text (4.7:1).
+*/
+@theme {
+  --color-cream: #fbf7ef;
+  --color-paper: #fffdf8;
+  --color-walnut: #5a3e2b;
+  --color-walnut-dark: #4a3223;
+  --color-ink: #3b2a1e;
+  --color-sage: #87a96b;
+  --color-sage-deep: #4a6634;
+  --color-sage-tint: #ebeedd;
+  --color-amber: #d5851f;
+  --color-amber-deep: #8a500c;
+  --color-amber-soft: #f2c27b;
+  --color-muted: #6b5a4b;
+  --color-line: #ddd5c2;
+  --color-field: #8c7a69;
+  --color-danger: #a4271a;
+  --color-sand: #e7dcc8;
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-kannada: var(--font-noto-kannada), var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1.5rem;
+  --radius-panel: 2rem;
+
+  --shadow-soft: 0 12px 30px -16px rgb(59 42 30 / 0.25);
+  --shadow-lift: 0 20px 40px -20px rgb(59 42 30 / 0.3);
+  --shadow-logo: 0 40px 70px -20px rgb(0 0 0 / 0.55);
+
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -10px; }
+  }
+}
+
+/* The site has no dark theme. Tie shadcn's `dark:` styles to a .dark class that is
+   never set, so a phone in dark mode does not turn form fields grey. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* `kn:` variant applies only on Kannada pages, e.g. kn:tracking-normal */
+@custom-variant kn (&:where(:lang(kn), :lang(kn) *));
+
+/* shadcn/ui semantic tokens mapped onto the brand palette */
+:root {
+  --radius: 0.75rem;
+  --background: var(--color-cream);
+  --foreground: var(--color-ink);
+  --card: var(--color-paper);
+  --card-foreground: var(--color-ink);
+  --popover: var(--color-paper);
+  --popover-foreground: var(--color-ink);
+  --primary: var(--color-walnut);
+  --primary-foreground: var(--color-cream);
+  --secondary: var(--color-sage-tint);
+  --secondary-foreground: var(--color-sage-deep);
+  --muted: var(--color-sage-tint);
+  --muted-foreground: var(--color-muted);
+  --accent: var(--color-amber);
+  --accent-foreground: var(--color-ink);
+  --destructive: var(--color-danger);
+  --border: var(--color-line);
+  --input: var(--color-field);
+  --ring: var(--color-amber);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  html {
+    /* 17px base: easier reading for older visitors, still scales with browser zoom */
+    font-size: 106.25%;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3 {
+    @apply font-extrabold text-ink;
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  :focus-visible {
+    outline: 3px solid var(--color-amber);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Kannada: dedicated font, no negative tracking, taller lines for vowel signs */
+  html:lang(kn) body {
+    font-family: var(--font-kannada);
+    line-height: 1.8;
+  }
+  /* Balanced/pretty wrapping is very slow for Kannada shaping on low-end phones. */
+  html:lang(kn) p,
+  html:lang(kn) h1,
+  html:lang(kn) h2,
+  html:lang(kn) h3 {
+    text-wrap: wrap;
+  }
+  html:lang(kn) h1,
+  html:lang(kn) h2,
+  html:lang(kn) h3 {
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
+  }
+  html:lang(kn) .tracking-label {
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Small uppercase label used for section pills. Kannada drops the uppercase/tracking. */
+  .tracking-label {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* The source logo is a 1280x640 image with white padding. This crops to the artwork. */
+  .logo-crop {
+    --w: 8rem;
+    position: relative;
+    display: block;
+    width: var(--w);
+    height: calc(var(--w) * 0.267);
+    overflow: hidden;
+  }
+  @media (min-width: 40rem) {
+    .logo-crop { --w: 9.5rem; }
+  }
+  .logo-crop img {
+    position: absolute;
+    max-width: none;
+    width: calc(var(--w) * 1.1378);
+    height: auto;
+    left: calc(var(--w) * -0.0756);
+    top: calc(var(--w) * -0.1422);
+  }
+
+  /* Fade-in on scroll using CSS scroll-driven animations (no JavaScript).
+     Browsers without support, and visitors who prefer reduced motion, just see the content. */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 55%;
+      }
+    }
+  }
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  .logo-card {
+    transform: perspective(900px) rotateY(-6deg) rotateX(3deg) scale(1.02);
+    transition: transform 0.4s ease;
+  }
+  .logo-card:hover {
+    transform: perspective(900px) rotateY(0) rotateX(0) scale(1.05);
+  }
+  @media (min-width: 64rem) {
+    .logo-card {
+      transform: perspective(900px) rotateY(-8deg) rotateX(3deg) scale(1.04);
+    }
+  }
+}
