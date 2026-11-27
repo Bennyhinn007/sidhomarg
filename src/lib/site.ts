@@ -18,10 +18,23 @@ export const site = {
   },
 
   contact: {
-    email: null as string | null, // e.g. "info@example.org"
-    phone: null as string | null, // e.g. "+91 98765 43210"
-    address: { en: null as string | null, kn: null as string | null },
-    hours: { en: null as string | null, kn: null as string | null },
+    email: "sidhomargco@gmail.com" as string | null,
+    phone: "+91 81056 42464" as string | null,
+    address: {
+      en: "1st Floor, Patil Complex, Gandhi Chowk, Bhalki, Karnataka, India" as string | null,
+      kn: "ಮೊದಲನೇ ಮಹಡಿ, ಪಾಟೀಲ್ ಕಾಂಪ್ಲೆಕ್ಸ್, ಗಾಂಧಿ ಚೌಕ್, ಭಾಲ್ಕಿ, ಕರ್ನಾಟಕ, ಭಾರತ" as string | null,
+    },
+    hours: {
+      en: "Monday to Friday, 9 AM to 5 PM" as string | null,
+      kn: "ಸೋಮವಾರದಿಂದ ಶುಕ್ರವಾರ, ಬೆಳಿಗ್ಗೆ 9 ರಿಂದ ಸಂಜೆ 5" as string | null,
+    },
+    /** Structured address for search engines (schema.org PostalAddress). */
+    postal: {
+      streetAddress: "1st Floor, Patil Complex, Gandhi Chowk",
+      addressLocality: "Bhalki",
+      addressRegion: "Karnataka",
+      addressCountry: "IN",
+    },
   },
 
   /** Full profile URLs. Icons are shown only for links that are set. */

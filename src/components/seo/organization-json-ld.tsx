@@ -29,7 +29,8 @@ export async function OrganizationJsonLd({ locale }: { locale: Locale }) {
       birthPlace: { "@type": "Place", name: "Bhalki" },
     },
     ...(site.contact.email && { email: site.contact.email }),
-    ...(site.contact.phone && { telephone: site.contact.phone }),
+    ...(site.contact.phone && { telephone: site.contact.phone.replace(/\s/g, "") }),
+    address: { "@type": "PostalAddress", ...site.contact.postal },
     ...(sameAs.length > 0 && { sameAs }),
   };
 
