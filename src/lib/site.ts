@@ -38,6 +38,27 @@ export const site = {
    */
   recruitmentEmail: null as string | null, // e.g. "careers@example.org"
 
+  /**
+   * Donations go straight to this UPI ID. No payment gateway is involved, so the
+   * website can never confirm a payment; donors confirm it in their UPI app.
+   */
+  donate: {
+    upiId: "ippbpranav@ybl",
+    /** Shown in the donor's UPI app. Should match the bank account holder's name. */
+    payeeName: "Sidhomarg Foundation",
+    note: "Donation to Sidhomarg Foundation",
+    amounts: [101, 201, 301, 401, 501],
+    defaultAmount: 101,
+    minAmount: 1,
+    /** Common per-transaction UPI limit for person-to-person payments. */
+    maxAmount: 100000,
+    /**
+     * Optional: path in /public to the official QR image (e.g. "/donate/upi-qr.png").
+     * When null, a QR code is generated from upiId that also carries the selected amount.
+     */
+    qrImage: null as string | null,
+  },
+
   founder: {
     /** Path inside /public, e.g. "/photos/founder.jpg". */
     photo: null as string | null,

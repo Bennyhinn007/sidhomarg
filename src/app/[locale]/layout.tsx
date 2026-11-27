@@ -64,7 +64,7 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: "Nav" });
   const messages = await getMessages();
   // Only the text needed by client components is sent to the browser.
-  const clientMessages = { Nav: messages.Nav, Form: messages.Form };
+  const clientMessages = { Nav: messages.Nav, Form: messages.Form, Donate: messages.Donate };
 
   return (
     <html lang={locale} className={`${jakarta.variable} ${notoKannada.variable}`}>

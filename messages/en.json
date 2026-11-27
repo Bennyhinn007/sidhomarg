@@ -22,6 +22,10 @@
       "title": "Careers",
       "description": "Work with Sidhomarg Foundation. Open roles: Social Media Manager, Website Manager and Legal Consultant."
     },
+    "donate": {
+      "title": "Donate",
+      "description": "Support Anna, Akshara and Arogya. Donate to Sidhomarg Foundation directly by UPI with Google Pay, PhonePe, Paytm or any UPI app."
+    },
     "contact": {
       "title": "Contact",
       "description": "Contact Sidhomarg Foundation."
@@ -38,6 +42,7 @@
     "volunteer": "Volunteer",
     "about": "About",
     "careers": "Careers",
+    "donate": "Donate",
     "contact": "Contact",
     "volunteerCta": "Volunteer",
     "homeLink": "Sidhomarg Foundation, home page",
@@ -169,6 +174,40 @@
     "emailPortfolio": "Portfolio or LinkedIn URL:",
     "emailCv": "[Please attach your CV to this email before sending.]",
     "emailThanks": "Thank you."
+  },
+  "Donate": {
+    "pill": "Donate",
+    "title": "Support Anna, Akshara and Arogya.",
+    "intro": "Your donation goes directly to Sidhomarg Foundation's UPI-linked bank account and helps provide food, education and healthcare to people in need.",
+    "chooseAmount": "Choose an amount",
+    "otherAmount": "Other amount",
+    "enterAmount": "Enter amount in rupees",
+    "amountHint": "Any amount from {min} to {max}.",
+    "amountError": "Please enter an amount from {min} to {max}.",
+    "donateNow": "Donate Now",
+    "donateAmount": "Donate {amount} Now",
+    "opensApp": "Opens Google Pay, PhonePe, Paytm or your UPI app with the details filled in.",
+    "desktopHint": "On a computer? Scan the QR code with any UPI app on your phone.",
+    "startedTitle": "Complete your {amount} payment in your UPI app.",
+    "startedText": "This website cannot see payments, so it will not show a confirmation. Your UPI app will tell you whether the payment went through. If no app opened, scan the QR code or pay to the UPI ID shown.",
+    "trustDirect": "Paid directly by UPI to the Foundation. No payment gateway and no extra charges.",
+    "trustCheck": "Before you approve, check that your UPI app shows the UPI ID below.",
+    "scanTitle": "Scan to pay",
+    "scanText": "Scan with any UPI app. The amount you chose is already included.",
+    "scanTextStatic": "Scan with any UPI app, then enter the amount you wish to give.",
+    "qrAlt": "UPI QR code for paying {upiId}",
+    "qrNeedsAmount": "Enter a valid amount to see the QR code.",
+    "upiIdLabel": "Or pay to this UPI ID",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copiedAnnounce": "UPI ID copied.",
+    "payeeLine": "Receiver: {name}",
+    "howTitle": "How it works",
+    "how1": "Choose an amount, or enter your own.",
+    "how2": "Press Donate Now on your phone, or scan the QR code from a computer.",
+    "how3": "Check the details and approve the payment in your UPI app with your UPI PIN.",
+    "bandTitle": "Help us reach one more family.",
+    "bandText": "Every donation supports food, education and healthcare for people in need. Give securely by UPI in a few seconds."
   },
   "Contact": {
     "pill": "Contact",

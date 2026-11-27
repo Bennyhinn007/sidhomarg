@@ -7,6 +7,7 @@ import { VisionMission } from "@/components/sections/vision-mission";
 import { FounderProfile } from "@/components/sections/founder-profile";
 import { Container, Panel, Pill } from "@/components/sections/primitives";
 import { OrganizationJsonLd } from "@/components/seo/organization-json-ld";
+import { DonateBand } from "@/components/sections/donate-band";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
@@ -33,6 +34,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           <FounderProfile />
         </Container>
       </Panel>
+
+      <DonateBand />
     </>
   );
 }

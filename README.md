@@ -74,6 +74,17 @@ and the body is a short template in the visitor's language asking for full name,
 qualifications, experience and portfolio/LinkedIn, with a reminder to attach a CV.
 While `recruitmentEmail` is `null` the buttons show "Email coming soon" instead.
 
+## Donations (`/donate`, `/kn/donate`)
+
+Direct UPI payments with no gateway, API keys or backend. Settings live in `src/lib/site.ts` → `donate`
+(UPI ID, receiver name, note, preset amounts, default, min/max).
+
+- **Donate Now** is a `upi://pay` link (`pa`, `pn`, `am`, `cu=INR`, `tn`) that opens Google Pay, PhonePe,
+  Paytm or another UPI app on phones.
+- The QR code is generated in the browser from the same link, so it carries the selected amount.
+  To show the official QR image instead, put it in `public/` and set `donate.qrImage`.
+- The site cannot verify payments, so it never shows a success message; donors confirm in their UPI app.
+
 ## Visit counter
 
 The footer shows the total number of website visits, shared by English and Kannada pages.
