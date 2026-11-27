@@ -8,6 +8,7 @@ import { FounderProfile } from "@/components/sections/founder-profile";
 import { Container, Panel, Pill } from "@/components/sections/primitives";
 import { OrganizationJsonLd } from "@/components/seo/organization-json-ld";
 import { DonateBand } from "@/components/sections/donate-band";
+import { BlessingCard } from "@/components/sections/blessing-card";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
@@ -24,6 +25,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <OrganizationJsonLd locale={locale as Locale} />
       <Hero />
       <VisionMission />
+
+      <BlessingCard />
 
       <Panel aria-labelledby="founders-title">
         <Container>

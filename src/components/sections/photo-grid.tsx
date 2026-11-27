@@ -58,22 +58,33 @@ export async function PhotoGrid({
     );
   }
 
+  // Masonry columns: photos keep their own shape with no empty gaps. Tapping opens the full photo.
   return (
-    <ul className={cn("grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4", stagger)}>
-      {photos.map((p) => (
-        <li key={p.src}>
+    <ul className="columns-2 gap-3 md:columns-3 md:gap-4">
+      {photos.map((p, i) => (
+        <li key={p.src} className="mb-3 break-inside-avoid md:mb-4">
           <figure className="group">
-            <div className="relative overflow-hidden rounded-[1.25rem] bg-walnut">
+            <a
+              href={p.src}
+              target="_blank"
+              rel="noopener"
+              aria-label={tCommon("openPhoto", { alt: p.alt[locale] })}
+              className="relative block overflow-hidden rounded-[1.25rem] bg-walnut"
+            >
               <Image
                 src={p.src}
                 width={p.width}
                 height={p.height}
                 alt={p.alt[locale]}
                 sizes="(min-width: 768px) 33vw, 50vw"
+                // The first row is likely on screen straight away.
+                loading={i < 2 ? "eager" : "lazy"}
                 className="h-auto w-full transition-transform duration-500 group-hover:scale-105"
               />
-            </div>
-            <figcaption className="mt-2 text-[0.95rem] font-semibold">{p.caption[locale]}</figcaption>
+            </a>
+            {p.caption && (
+              <figcaption className="mt-2 text-[0.95rem] font-semibold">{p.caption[locale]}</figcaption>
+            )}
           </figure>
         </li>
       ))}

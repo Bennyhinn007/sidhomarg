@@ -51,7 +51,8 @@
   },
   "Common": {
     "placeholder": "To be added",
-    "photoComing": "Photo to be added"
+    "photoComing": "Photo to be added",
+    "openPhoto": "{alt} (opens the full photo)"
   },
   "Home": {
     "pill": "Sidhomarg Foundation",
@@ -65,6 +66,8 @@
     "visionText": "A society where every individual has access to food, education and healthcare, enabling people to live with dignity, equality and opportunity.",
     "missionTitle": "Our Mission",
     "missionText": "To serve humanity through meaningful initiatives in nutrition, education and healthcare, reaching underserved communities through sustainable, inclusive and community-driven action.",
+    "blessingTitle": "With Divine Blessings",
+    "blessingAlt": "Smiling elder in white clothes and glasses, seated outdoors",
     "leadership": "Leadership",
     "founderTitle": "Our Founder",
     "founderCommitment": "Our commitment is to serve humanity, strengthen communities and create a society where everyone has the opportunity to flourish.",

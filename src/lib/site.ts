@@ -74,7 +74,16 @@ export const site = {
 
   founder: {
     /** Path inside /public, e.g. "/photos/founder.jpg". */
-    photo: null as string | null,
+    photo: "/photos/founder/founder.jpg" as string | null,
+  },
+
+  /**
+   * "With Divine Blessings" card on the home page.
+   * `name` is shown under the photo once the Trust confirms it (English and Kannada).
+   */
+  blessing: {
+    photo: { src: "/photos/blessing/blessing.jpg", width: 797, height: 1263 },
+    name: { en: null as string | null, kn: null as string | null },
   },
 } as const;
 
