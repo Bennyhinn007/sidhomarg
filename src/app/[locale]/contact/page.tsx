@@ -24,7 +24,8 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
   const rows: { icon: LucideIcon; label: string; value: string | null; href?: string }[] = [
     { icon: MapPin, label: t("office"), value: address[locale] },
     { icon: Phone, label: t("phone"), value: phone, href: phone ? `tel:${phone.replace(/\s/g, "")}` : undefined },
-    { icon: Mail, label: t("email"), value: email, href: email ? `mailto:${email}` : undefined },
+    // Email row appears only when a general contact email is set in src/lib/site.ts.
+    ...(email ? [{ icon: Mail, label: t("email"), value: email, href: `mailto:${email}` }] : []),
     { icon: Clock, label: t("hours"), value: hours[locale] },
   ];
 

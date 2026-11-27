@@ -49,7 +49,7 @@ export const site = {
    * Official recruitment address used by every "Apply Now" button on /careers.
    * While null, the buttons are shown as unavailable instead of using a made-up address.
    */
-  recruitmentEmail: null as string | null, // e.g. "careers@example.org"
+  recruitmentEmail: "sidhomargco@gmail.com" as string | null,
 
   /**
    * Donations go straight to this UPI ID. No payment gateway is involved, so the

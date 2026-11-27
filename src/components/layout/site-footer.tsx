@@ -15,7 +15,9 @@ export async function SiteFooter() {
   const tCommon = await getTranslations("Common");
   const locale = await getLocale();
   const year = new Date().getFullYear();
+  // Footer shows the general email if one is set, otherwise the phone number.
   const email = site.contact.email;
+  const phone = site.contact.phone;
   const anySocial = networks.some((n) => site.social[n]);
 
   return (
@@ -45,12 +47,12 @@ export async function SiteFooter() {
         <div className="mt-10 flex flex-col gap-6 sm:mt-14 sm:gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-base text-sand/90">{t("reach")}</p>
-            {email ? (
+            {email || phone ? (
               <a
-                href={`mailto:${email}`}
+                href={email ? `mailto:${email}` : `tel:${phone!.replace(/\s/g, "")}`}
                 className="group mt-1 inline-flex min-h-11 items-center gap-2 text-xl font-semibold break-all text-cream hover:text-amber-soft"
               >
-                {email}
+                {email ?? phone}
                 <ArrowRight aria-hidden="true" className="size-5 transition-transform group-hover:translate-x-1" />
               </a>
             ) : (
