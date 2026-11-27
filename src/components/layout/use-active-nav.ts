@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "@/i18n/navigation";
-import { navItems, type NavItem } from "@/data/nav";
+import type { NavItem } from "@/data/nav";
 
 /** True when `href` is the current page (or a sub-page of it). Works for both languages. */
 export function isActive(pathname: string, href: NavItem["href"]) {
@@ -9,7 +9,8 @@ export function isActive(pathname: string, href: NavItem["href"]) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export function useActiveIndex() {
+/** Index of the current page within `items`, or -1 if it is not in that menu. */
+export function useActiveIndex(items: NavItem[]) {
   const pathname = usePathname();
-  return navItems.findIndex((item) => isActive(pathname, item.href));
+  return items.findIndex((item) => isActive(pathname, item.href));
 }

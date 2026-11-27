@@ -30,6 +30,7 @@ npm run dev                  # http://localhost:3000
 | Gallery | `/gallery` | `/kn/gallery` |
 | Support Us (donate and/or volunteer) | `/support` | `/kn/support` |
 | About (with Founders Corner) | `/about` | `/kn/about` |
+| Events & Articles | `/events` | `/kn/events` |
 | Careers | `/careers` | `/kn/careers` |
 | Contact | `/contact` | `/kn/contact` |
 
@@ -51,6 +52,8 @@ npm run dev                  # http://localhost:3000
 | Founders Corner photos | `public/photos/events/` + `founderEvents` in `src/data/photos.ts` |
 | About → Our recent works | `src/data/works.ts` (photos in `public/photos/works/`) |
 | About → Our volunteers | `src/data/volunteers.ts` (photos in `public/photos/volunteers/`) |
+| Upcoming events | `src/data/events.ts` (past events drop off automatically, page refreshes daily) |
+| Published articles | `src/data/articles.ts` (PDFs in `public/articles/`). "Submit an Article" emails the Trust's address for review |
 | Gallery photos | `public/photos/gallery/` + `galleryPhotos` in `src/data/photos.ts` |
 | Recruitment email (Apply Now buttons) | `src/lib/site.ts` → `recruitmentEmail` |
 | Career roles | `src/data/careers.ts` + `Careers.roles` in `messages/*.json` |

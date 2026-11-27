@@ -18,6 +18,10 @@
       "title": "About us and Founders Corner",
       "description": "Learn about Sidhomarg Foundation, its founder Siddrameshwar S. Wale and the Anna, Akshara, Arogya concept."
     },
+    "events": {
+      "title": "Events & Articles",
+      "description": "Upcoming events of Sidhomarg Foundation and articles on food, education and health. Submit your own article for review."
+    },
     "careers": {
       "title": "Careers",
       "description": "Work with Sidhomarg Foundation. Open roles: Social Media Manager, Website Manager and Legal Consultant."
@@ -37,8 +41,8 @@
     "gallery": "Gallery",
     "support": "Support Us",
     "about": "About",
+    "events": "Events & Articles",
     "careers": "Careers",
-    "donate": "Donate",
     "contact": "Contact",
     "homeLink": "Sidhomarg Foundation, home page",
     "language": "Choose language",
@@ -118,6 +122,7 @@
     "cornerPill": "Founders Corner",
     "cornerTitle": "Siddrameshwar S. Wale, in the field",
     "cornerIntro": "Moments with the founder at events and community work.",
+    "cornerArticles": "Read articles",
     "cornerEmpty": "Event photos of the founder will be added here."
   },
   "Careers": {
@@ -157,6 +162,37 @@
     "emailExperience": "Relevant experience:",
     "emailPortfolio": "Portfolio or LinkedIn URL:",
     "emailCv": "[Please attach your CV to this email before sending.]",
+    "emailThanks": "Thank you."
+  },
+  "Events": {
+    "pill": "Events & Articles",
+    "title": "Events, stories and articles.",
+    "intro": "Upcoming events of Sidhomarg Foundation, and articles by the founder, volunteers and well-wishers.",
+    "eventsTitle": "Upcoming events",
+    "eventsEmpty": "Upcoming events will be announced here.",
+    "articlesTitle": "Articles",
+    "articlesEmpty": "Articles will be published here after review.",
+    "by": "By {author}",
+    "readArticle": "Read article",
+    "submitTitle": "Write for Sidhomarg",
+    "submitText": "Have a story, idea or experience about food, education or health in your community? Send your article to the Trust. Every article is reviewed before it is posted.",
+    "submitButton": "Submit an Article",
+    "submitLabel": "Submit an article by email. Opens your email app.",
+    "orEmail": "No email app on this device? Send your article to <link>{email}</link>.",
+    "guidelinesTitle": "Before you send",
+    "guide1": "Write in English or Kannada.",
+    "guide2": "Send your own work, as text in the email or as a Word or PDF file.",
+    "guide3": "Add photos if you have them, and say who took them.",
+    "guide4": "The Trust reviews every article and may edit or decline it before posting.",
+    "emailGreeting": "Dear Sidhomarg Foundation team,",
+    "emailIntro": "I would like to submit an article for review.",
+    "emailName": "Full name:",
+    "emailPhone": "Contact number:",
+    "emailTitle": "Article title:",
+    "emailLanguage": "Language (English / Kannada):",
+    "emailArticle": "Article (paste it below, or attach a Word / PDF file):",
+    "emailPhotos": "[Attach any photos and mention who took them.]",
+    "emailConsent": "I confirm this is my own work and I allow Sidhomarg Foundation to edit and publish it.",
     "emailThanks": "Thank you."
   },
   "Support": {

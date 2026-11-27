@@ -2,14 +2,14 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { navItems } from "@/data/nav";
+import { desktopItems as navItems } from "@/data/nav";
 import { cn } from "@/lib/utils";
 import { useActiveIndex } from "./use-active-nav";
 
 /** Top navigation for tablets and desktops (1024px and wider). */
 export function DesktopNav() {
   const t = useTranslations("Nav");
-  const active = useActiveIndex();
+  const active = useActiveIndex(navItems);
 
   return (
     <nav aria-label={t("main")} className="hidden lg:block">

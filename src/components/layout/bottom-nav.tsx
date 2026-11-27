@@ -2,7 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { navItems } from "@/data/nav";
+import { bottomItems as navItems } from "@/data/nav";
 import { cn } from "@/lib/utils";
 import { useActiveIndex } from "./use-active-nav";
 
@@ -13,7 +13,7 @@ import { useActiveIndex } from "./use-active-nav";
  */
 export function BottomNav() {
   const t = useTranslations("Nav");
-  const active = useActiveIndex();
+  const active = useActiveIndex(navItems);
   const count = navItems.length;
   // Kannada labels are longer: smaller icon, and the label may wrap to two lines.
   const kn = useLocale() === "kn";
