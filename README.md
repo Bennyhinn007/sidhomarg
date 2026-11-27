@@ -48,7 +48,7 @@ npm run dev                  # http://localhost:3000
 | Email, phone, address, office hours | `src/lib/site.ts` → `contact` |
 | Facebook / Twitter / Instagram / LinkedIn links | `src/lib/site.ts` → `social` |
 | Founder photo | `public/photos/founder/founder.jpg`, set in `site.founder.photo` |
-| Home → "With Divine Blessings" card | `public/photos/blessing/blessing.jpg`; optional name in `site.blessing.name` |
+| Home → "With the divine blessings of" card | Photo: `public/photos/blessing/blessing.jpg`. Text: `Home.blessing*` in `messages/*.json` |
 | About → Our members | `src/data/members.ts` |
 | Founders Corner photos | `public/photos/events/` + `founderEvents` in `src/data/photos.ts` |
 | About → Our recent works | `src/data/works.ts` (photos in `public/photos/works/`) |

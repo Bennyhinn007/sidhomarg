@@ -77,13 +77,9 @@ export const site = {
     photo: "/photos/founder/founder.jpg" as string | null,
   },
 
-  /**
-   * "With Divine Blessings" card on the home page.
-   * `name` is shown under the photo once the Trust confirms it (English and Kannada).
-   */
+  /** Photo for the "With the divine blessings of" card on the home page (text is in messages/*.json). */
   blessing: {
     photo: { src: "/photos/blessing/blessing.jpg", width: 797, height: 1263 },
-    name: { en: null as string | null, kn: null as string | null },
   },
 } as const;
 
