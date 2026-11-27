@@ -32,6 +32,15 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             {t("founderTitle")}
           </h2>
           <FounderProfile />
+
+          <figure className="reveal mx-auto mt-8 max-w-3xl text-center sm:mt-10">
+            <blockquote className="text-[1.15rem] leading-relaxed font-semibold text-walnut sm:text-[1.4rem]">
+              {t("founderCommitment")}
+            </blockquote>
+            <figcaption className="mt-3 inline-block rounded-full bg-amber px-4 py-1.5 text-[0.95rem] font-extrabold text-ink sm:text-base">
+              {t("founderCommitmentMotto")}
+            </figcaption>
+          </figure>
         </Container>
       </Panel>
 

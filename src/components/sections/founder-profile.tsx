@@ -5,7 +5,7 @@ import { AaaPillars } from "./aaa-pillars";
 
 const roles = ["writer", "activist", "socialWorker", "educationalist"] as const;
 
-/** Profile card for the founder, Siddrameshwar S. Wale. */
+/** Profile card for the founder, Sidrameshwar S. Wale. */
 export async function FounderProfile({ headingLevel = "h3" }: { headingLevel?: "h2" | "h3" }) {
   const t = await getTranslations("Founder");
   const tCommon = await getTranslations("Common");
@@ -59,9 +59,17 @@ export async function FounderProfile({ headingLevel = "h3" }: { headingLevel?: "
           <figcaption className="mt-1 text-[0.95rem] text-muted">{t("mottoMeaning")}</figcaption>
         </figure>
 
-        <p className="mt-4 text-base text-ink/85 sm:text-[1.05rem]">{t("bio")}</p>
+        <div className="mt-4 grid gap-3 text-base text-ink/85 sm:text-[1.05rem]">
+          <p>{t("bio1")}</p>
+          <p>{t("bio2")}</p>
+        </div>
 
         <AaaPillars className="mt-6" label={tHome("aaaLabel")} />
+
+        <div className="mt-5 rounded-2xl bg-walnut px-5 py-4 text-cream">
+          <p className="tracking-label text-[0.78rem] font-bold text-amber-soft">{t("philosophyTitle")}</p>
+          <p className="mt-1 text-[1.05rem] leading-snug font-bold sm:text-lg">{t("philosophy")}</p>
+        </div>
       </div>
     </article>
   );

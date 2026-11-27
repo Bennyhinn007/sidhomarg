@@ -15,8 +15,8 @@
       "description": "Donate to Sidhomarg Foundation by UPI, volunteer for Anna, Akshara and Arogya, or do both with one short form."
     },
     "about": {
-      "title": "About us and Founders Corner",
-      "description": "Learn about Sidhomarg Foundation, its founder Siddrameshwar S. Wale and the Anna, Akshara, Arogya concept."
+      "title": "Who We Are and Founders Corner",
+      "description": "Sidhomarg Foundation is a registered charitable trust working for Anna (Food), Akshara (Education) and Arogya (Health). Learn about the Trust and its founder, Sidrameshwar S. Wale."
     },
     "events": {
       "title": "Events & Articles",
@@ -62,24 +62,29 @@
     "logoAlt": "Sidhomarg Foundation logo",
     "aaaLabel": "Our three pillars",
     "visionTitle": "Our Vision",
-    "visionText": "A society free from hunger, illiteracy and ill health, where everyone can live a healthy and dignified life.",
+    "visionText": "A society where every individual has access to food, education and healthcare, enabling people to live with dignity, equality and opportunity.",
     "missionTitle": "Our Mission",
-    "missionText": "To provide food, education and healthcare to people in need, especially in rural and marginalised communities, and to help them build the skills to improve their lives.",
+    "missionText": "To serve humanity through meaningful initiatives in nutrition, education and healthcare, reaching underserved communities through sustainable, inclusive and community-driven action.",
     "leadership": "Leadership",
-    "founderTitle": "Our Founder"
+    "founderTitle": "Our Founder",
+    "founderCommitment": "Our commitment is to serve humanity, strengthen communities and create a society where everyone has the opportunity to flourish.",
+    "founderCommitmentMotto": "Sarve Janah Sukhino Bhavantu"
   },
   "Founder": {
     "role": "Founder",
-    "name": "Siddrameshwar S. Wale",
-    "born": "Born in Bhalki",
+    "name": "Sidrameshwar S. Wale",
+    "born": "Born in Bhalki, Karnataka",
     "writer": "Writer",
-    "activist": "Activist",
+    "activist": "Social Activist",
     "socialWorker": "Social Worker",
-    "educationalist": "Educationalist",
-    "motto": "“Sarve Janaha Sukhino Bhavantu”",
-    "mottoMeaning": "May all people be happy.",
-    "bio": "Guided by this motto, he wants a society free from hunger, illiteracy and ill health. That is why the “AAA” concept of Anna, Akshara and Arogya was founded by the founder of Sidhomarg.",
-    "photoAlt": "Portrait of Siddrameshwar S. Wale"
+    "educationalist": "Education Advocate",
+    "motto": "“Sarve Janah Sukhino Bhavantu”",
+    "mottoMeaning": "May all people be happy and prosperous.",
+    "bio1": "Driven by the belief that meaningful social transformation begins with serving humanity, Sidrameshwar S. Wale founded Sidhomarg Foundation with a vision of building an inclusive, compassionate and empowered society.",
+    "bio2": "His philosophy centres on three fundamental pillars of human well-being — Anna (Food), Akshara (Education) and Arogya (Health). Through these three pillars, the Foundation seeks to address essential social needs, support underserved communities and create opportunities for a dignified and better quality of life.",
+    "philosophyTitle": "Our Guiding Philosophy",
+    "philosophy": "Save Humanity. Strengthen Communities. Build a Flourishing Society.",
+    "photoAlt": "Portrait of Sidrameshwar S. Wale"
   },
   "AAA": {
     "anna": "Anna",
@@ -96,15 +101,19 @@
   },
   "About": {
     "pill": "About",
-    "title": "About Sidhomarg Foundation",
-    "text": "We are a non-governmental organization that is committed to providing food, education, and healthcare to people in need, especially in rural and marginalized communities. We believe that everyone deserves to live a healthy and dignified life, regardless of their background or circumstances.",
+    "title": "Who We Are",
+    "about1": "Sidhomarg Foundation is a registered charitable trust committed to human well-being, social responsibility and inclusive community development. Guided by the philosophy of Sarve Janah Sukhino Bhavantu, we believe every individual deserves dignity, opportunity and access to life’s basic necessities.",
+    "about2": "Our mission is rooted in three fundamental pillars: Anna (Food), Akshara (Education) and Arogya (Health). Through these pillars, we aspire to address hunger, promote education and improve community health, particularly among underserved populations.",
+    "about3": "Driven by compassion, collective participation and selfless service, we strive to empower communities, protect human dignity and create lasting social impact.",
+    "tagline": "Save Humanity. Strengthen Communities. Build a Flourishing Society.",
+    "pillarsLine": "Anna • Akshara • Arogya",
     "programsTitle": "Our programmes",
     "programSchoolFeeding": "School feeding programmes",
     "programLiteracy": "Adult literacy programmes",
     "programHealth": "Mobile health clinics",
     "programVocational": "Vocational training programmes",
     "mottoTitle": "Our guiding motto",
-    "mottoText": "“Sarve Janaha Sukhino Bhavantu” means: may all people be happy.",
+    "mottoText": "“Sarve Janah Sukhino Bhavantu” means: may all people be happy and prosperous.",
     "worksPill": "Our work",
     "worksTitle": "Our recent works",
     "worksIntro": "The latest food, education and health activities of Sidhomarg Foundation.",
@@ -120,7 +129,7 @@
     "volunteersCtaText": "Would you like to help too?",
     "volunteersCta": "Become a volunteer",
     "cornerPill": "Founders Corner",
-    "cornerTitle": "Siddrameshwar S. Wale, in the field",
+    "cornerTitle": "Sidrameshwar S. Wale, in the field",
     "cornerIntro": "Moments with the founder at events and community work.",
     "cornerArticles": "Read articles",
     "cornerEmpty": "Event photos of the founder will be added here."
@@ -298,7 +307,7 @@
     "badge": "Serving with dignity",
     "toTop": "Back to top",
     "aboutTitle": "About Us",
-    "aboutText": "We are a non-governmental organization that is committed to providing food, education, and healthcare to people in need, especially in rural and marginalized communities. We believe that everyone deserves to live a healthy and dignified life, regardless of their background or circumstances. We offer a variety of programs and services, including school feeding programs, adult literacy programs, mobile health clinics, and vocational training programs. Our programs are designed to help people meet their basic needs and to develop the skills and knowledge they need to improve their lives.",
+    "aboutText": "Sidhomarg Foundation is a registered charitable trust committed to human well-being, social responsibility and inclusive community development. Guided by the philosophy of Sarve Janah Sukhino Bhavantu, we believe every individual deserves dignity, opportunity and access to life’s basic necessities.",
     "reach": "Reach out at:",
     "links": "Footer navigation",
     "social": "Social media",

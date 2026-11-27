@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Check, Newspaper } from "lucide-react";
+import { Check, Newspaper, Quote } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
@@ -36,14 +36,21 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
 
       <Container className="grid gap-8 py-8 sm:py-10 lg:grid-cols-[1.3fr_1fr] lg:gap-10">
         <div>
-          <p className="text-[1.1rem] leading-relaxed font-semibold text-walnut sm:text-[1.3rem]">{t("text")}</p>
+          <p className="text-[1.1rem] leading-relaxed font-semibold text-walnut sm:text-[1.3rem]">{t("about1")}</p>
+          <p className="mt-4 text-base leading-relaxed text-ink/85 sm:text-[1.08rem]">{t("about2")}</p>
+          <p className="mt-4 text-base leading-relaxed text-ink/85 sm:text-[1.08rem]">{t("about3")}</p>
 
-          <section aria-labelledby="motto-title" className="mt-8 border-l-4 border-amber pl-4">
+          <p className="mt-6 border-l-4 border-amber pl-4 text-[1.15rem] leading-snug font-extrabold text-walnut sm:text-[1.35rem]">
+            {t("tagline")}
+          </p>
+
+          <p className="mt-6 text-[1.05rem] font-bold tracking-wide text-amber-deep">{t("pillarsLine")}</p>
+          <AaaPillars className="mt-3 max-w-md" label={tHome("aaaLabel")} />
+
+          <section aria-labelledby="motto-title" className="mt-8 border-l-4 border-sage pl-4">
             <h2 id="motto-title" className="text-xl">{t("mottoTitle")}</h2>
             <p className="mt-1 text-[1.05rem] text-ink/85">{t("mottoText")}</p>
           </section>
-
-          <AaaPillars className="mt-8 max-w-md" label={tHome("aaaLabel")} />
         </div>
 
         <section
@@ -60,6 +67,23 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
             ))}
           </ul>
         </section>
+      </Container>
+
+      {/* Highlighted mission quote */}
+      <Container className="pt-2">
+        <figure className="reveal relative overflow-hidden rounded-[1.5rem] bg-walnut px-6 py-8 text-cream sm:rounded-[var(--radius-panel)] sm:px-12 sm:py-12">
+          <Quote aria-hidden="true" className="absolute -top-2 -left-1 size-24 text-amber/25 sm:size-32" strokeWidth={1.5} />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-12 -bottom-16 size-56 rounded-full bg-[radial-gradient(closest-side,rgb(213_133_31/0.5),transparent)]"
+          />
+          <figcaption className="tracking-label relative inline-block rounded-full bg-amber px-3.5 py-1.5 text-[0.8rem] font-bold text-ink">
+            {tHome("missionTitle")}
+          </figcaption>
+          <blockquote className="relative mt-4 max-w-3xl text-[1.25rem] leading-snug font-bold text-cream sm:text-[1.75rem]">
+            “{tHome("missionText")}”
+          </blockquote>
+        </figure>
       </Container>
 
       <Container className="py-8 sm:py-10">
