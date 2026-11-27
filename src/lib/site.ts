@@ -41,7 +41,7 @@ export const site = {
   social: {
     facebook: null as string | null,
     twitter: null as string | null,
-    instagram: null as string | null,
+    instagram: "https://www.instagram.com/_.sidhomarg._/" as string | null,
     linkedin: null as string | null,
   },
 
