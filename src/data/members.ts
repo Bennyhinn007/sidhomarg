@@ -17,4 +17,15 @@ export type Member = {
  *            alt: { en: "Portrait of Full Name", kn: "..." } },
  * },
  */
-export const members: Member[] = [];
+export const members: Member[] = [
+  {
+    name: { en: "Pranav Patil", kn: "ಪ್ರಣವ್ ಪಾಟೀಲ್" },
+    role: { en: "Co-Founder and VP", kn: "ಸಹ-ಸಂಸ್ಥಾಪಕರು ಮತ್ತು ಉಪಾಧ್ಯಕ್ಷರು" },
+    photo: {
+      src: "/photos/members/pranav.jpg",
+      width: 1280,
+      height: 1248,
+      alt: { en: "Portrait of Pranav Patil", kn: "ಪ್ರಣವ್ ಪಾಟೀಲ್ ಅವರ ಭಾವಚಿತ್ರ" },
+    },
+  },
+];

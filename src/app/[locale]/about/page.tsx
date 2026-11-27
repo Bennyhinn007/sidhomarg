@@ -86,16 +86,7 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
         </figure>
       </Container>
 
-      <Container className="py-8 sm:py-10">
-        <section aria-labelledby="works-title">
-          <Pill tone="amber">{t("worksPill")}</Pill>
-          <h2 id="works-title" className="mt-3 text-[clamp(1.5rem,5.4vw,2.7rem)]">{t("worksTitle")}</h2>
-          <p className="mt-2 mb-6 max-w-[36em] text-base sm:mb-8 sm:text-[1.05rem] text-ink/85">{t("worksIntro")}</p>
-          <RecentWorks />
-        </section>
-      </Container>
-
-      <Panel aria-labelledby="members-title" className="mt-2">
+      <Panel aria-labelledby="members-title" className="mt-8">
         <Container>
           <Pill>{t("membersPill")}</Pill>
           <h2 id="members-title" className="mt-3 text-[clamp(1.5rem,5.4vw,2.7rem)]">
@@ -106,7 +97,16 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
         </Container>
       </Panel>
 
-      <Panel aria-labelledby="volunteers-title" className="mt-8">
+      <Container className="py-8 sm:py-10">
+        <section aria-labelledby="works-title">
+          <Pill tone="amber">{t("worksPill")}</Pill>
+          <h2 id="works-title" className="mt-3 text-[clamp(1.5rem,5.4vw,2.7rem)]">{t("worksTitle")}</h2>
+          <p className="mt-2 mb-6 max-w-[36em] text-base sm:mb-8 sm:text-[1.05rem] text-ink/85">{t("worksIntro")}</p>
+          <RecentWorks />
+        </section>
+      </Container>
+
+      <Panel aria-labelledby="volunteers-title" className="mt-2">
         <Container>
           <Pill>{t("volunteersPill")}</Pill>
           <h2 id="volunteers-title" className="mt-3 text-[clamp(1.5rem,5.4vw,2.7rem)]">
