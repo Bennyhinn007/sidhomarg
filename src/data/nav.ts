@@ -1,6 +1,5 @@
 import {
   BriefcaseBusiness,
-  HandHeart,
   HeartHandshake,
   House,
   Images,
@@ -9,11 +8,11 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-export type NavKey = "home" | "gallery" | "volunteer" | "about" | "careers" | "donate" | "contact";
+export type NavKey = "home" | "gallery" | "support" | "about" | "careers" | "contact";
 
 export type NavItem = {
   key: NavKey;
-  href: "/" | "/gallery" | "/volunteer" | "/about" | "/careers" | "/donate" | "/contact";
+  href: "/" | "/gallery" | "/support" | "/about" | "/careers" | "/contact";
   icon: LucideIcon;
 };
 
@@ -24,15 +23,14 @@ export type NavItem = {
 export const pages: NavItem[] = [
   { key: "home", href: "/", icon: House },
   { key: "gallery", href: "/gallery", icon: Images },
-  { key: "volunteer", href: "/volunteer", icon: HeartHandshake },
+  { key: "support", href: "/support", icon: HeartHandshake },
   { key: "about", href: "/about", icon: Info },
   { key: "careers", href: "/careers", icon: BriefcaseBusiness },
-  { key: "donate", href: "/donate", icon: HandHeart },
   { key: "contact", href: "/contact", icon: Mail },
 ];
 
-/** Pages not in the top bar or the mobile bottom bar. Donate has its own header button. */
-const footerOnly: NavKey[] = ["careers", "donate"];
+/** Pages linked only from the footer, not from the top bar or the mobile bottom bar. */
+const footerOnly: NavKey[] = ["careers"];
 
 /** Main navigation: the desktop top bar and the mobile bottom bar. */
 export const navItems: NavItem[] = pages.filter((p) => !footerOnly.includes(p.key));

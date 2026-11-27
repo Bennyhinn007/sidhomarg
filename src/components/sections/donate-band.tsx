@@ -3,9 +3,9 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container } from "./primitives";
 
-/** Short call-to-action on the home page that leads to /donate. */
+/** Short call-to-action on the home page that leads to /support. */
 export async function DonateBand() {
-  const t = await getTranslations("Donate");
+  const t = await getTranslations("Support");
 
   return (
     <Container className="py-8 sm:py-12">
@@ -25,7 +25,7 @@ export async function DonateBand() {
             <p className="mt-2 max-w-[34em] text-base text-sand sm:text-[1.05rem]">{t("bandText")}</p>
           </div>
           <Link
-            href="/donate"
+            href="/support"
             className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-amber px-7 text-[1.05rem] font-extrabold text-ink shadow-[0_12px_26px_-10px_rgb(213_133_31/0.8)] transition hover:-translate-y-0.5 hover:bg-amber-soft"
           >
             <HeartHandshake aria-hidden="true" className="size-5" />

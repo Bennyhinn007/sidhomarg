@@ -28,7 +28,7 @@ npm run dev                  # http://localhost:3000
 |---|---|---|
 | Home | `/` | `/kn` |
 | Gallery | `/gallery` | `/kn/gallery` |
-| Volunteer | `/volunteer` | `/kn/volunteer` |
+| Support Us (donate and/or volunteer) | `/support` | `/kn/support` |
 | About (with Founders Corner) | `/about` | `/kn/about` |
 | Careers | `/careers` | `/kn/careers` |
 | Contact | `/contact` | `/kn/contact` |
@@ -61,7 +61,7 @@ Nothing about the Trust is invented.
 
 ## Forms
 
-The contact and volunteer forms are **demos**. They validate input and then tell the
+The contact form is a **demo**. They validate input and then tell the
 visitor plainly that nothing was sent. To make them real, replace the `onSubmit`
 handler in `src/components/forms/demo-form.tsx` (for example with a Server Action
 that sends an email) and remove the demo notice text in `messages/*.json`.
@@ -74,7 +74,39 @@ and the body is a short template in the visitor's language asking for full name,
 qualifications, experience and portfolio/LinkedIn, with a reminder to attach a CV.
 While `recruitmentEmail` is `null` the buttons show "Email coming soon" instead.
 
-## Donations (`/donate`, `/kn/donate`)
+## Support Us (`/support`, `/kn/support`)
+
+One form for donating, volunteering, or both: full name, mobile number, volunteer interest,
+donation amount (₹101 default, ₹201–₹501, custom, or "volunteer only") and a consent checkbox.
+Old `/donate` and `/volunteer` links redirect here.
+
+On submit the form validates the fields, checks reCAPTCHA, creates a reference ID such as
+`SM-261127-7K3QD`, and emails the details to the Trust with **EmailJS**. The email always says
+**Pending Verification** for donations. The donor then taps **Pay** to open their UPI app; the UPI
+note carries the reference, phone and name (ASCII only, max 50 characters) so the payment can be matched.
+
+Duplicate protection: the button is disabled while sending, the form locks after success, the
+same details are not re-sent in the same browser session, and a new submission is blocked for
+10 seconds after a successful one. Retries after a failed send are allowed straight away and keep
+the same reference ID.
+
+### Setup (one time)
+
+1. **reCAPTCHA v2**: at https://www.google.com/recaptcha/admin create a *v2 "I'm not a robot" Checkbox*
+   key for your domain (and `localhost` for testing). Copy the **site key** and **secret key**.
+2. **EmailJS** (free plan: 200 emails/month): at https://dashboard.emailjs.com
+   - Add an email service (e.g. Gmail for sidhomargco@gmail.com) → note the **Service ID**.
+   - Create a template from `docs/emailjs-support-template.html` (recipient and subject are in that file)
+     → note the **Template ID**. In the template's *Settings*, enable reCAPTCHA V2 and paste the **secret key**.
+   - Account → **Public Key**. Account → Security: add your domain to the allow-list.
+3. Set these in Vercel (Settings → Environment Variables) and in `.env.local`:
+   `NEXT_PUBLIC_EMAILJS_SERVICE_ID`, `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`,
+   `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`, `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`. Redeploy.
+
+Until all four are set, the form shows "being set up" and the page falls back to a direct
+**Donate Now** UPI button, the QR code and the UPI ID.
+
+## Donations (UPI settings)
 
 Direct UPI payments with no gateway, API keys or backend. Settings live in `src/lib/site.ts` → `donate`
 (UPI ID, receiver name, note, preset amounts, default, min/max).

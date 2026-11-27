@@ -71,7 +71,7 @@ export async function Volunteers() {
       <div className="mt-6 flex flex-col gap-3 rounded-2xl border border-line bg-paper p-5 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-[1.03rem] font-semibold text-walnut">{t("volunteersCtaText")}</p>
         <Link
-          href="/volunteer"
+          href="/support"
           className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-amber px-6 font-bold text-ink transition hover:-translate-y-0.5 hover:bg-amber-soft"
         >
           {t("volunteersCta")}

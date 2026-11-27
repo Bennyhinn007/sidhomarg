@@ -37,18 +37,12 @@ export async function SiteHeader() {
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
           <LanguageSwitcher />
           <Link
-            href="/donate"
+            href="/support"
             aria-label={t("donate")}
             className="inline-flex min-h-11 min-w-11 items-center justify-center gap-1.5 rounded-full bg-amber px-2.5 text-[0.9rem] font-extrabold text-ink shadow-[0_8px_18px_-10px_rgb(213_133_31/0.9)] transition-colors hover:bg-amber-soft min-[400px]:px-3.5 sm:min-h-12 sm:px-5 sm:text-[0.95rem]"
           >
             <HeartHandshake aria-hidden="true" className="size-5" />
             <span className="hidden min-[400px]:inline">{t("donate")}</span>
-          </Link>
-          <Link
-            href="/volunteer"
-            className="hidden min-h-12 items-center rounded-full bg-walnut px-5 text-[0.95rem] font-bold text-cream transition-colors hover:bg-walnut-dark xl:inline-flex"
-          >
-            {t("volunteerCta")}
           </Link>
         </div>
       </div>

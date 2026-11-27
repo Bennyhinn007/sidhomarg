@@ -22,7 +22,7 @@ export async function Hero() {
         <p className="mt-4 max-w-[32em] text-base text-sand sm:mt-5 sm:text-[1.08rem]">{t("intro")}</p>
         <div className="mt-6 flex flex-wrap gap-2.5 sm:mt-7 sm:gap-3">
           <Link
-            href="/volunteer"
+            href="/support"
             className="inline-flex min-h-12 items-center rounded-full bg-amber px-5 text-[0.95rem] font-bold sm:min-h-13 sm:px-7 sm:text-base text-ink shadow-[0_10px_24px_-8px_rgb(213_133_31/0.6)] transition hover:-translate-y-0.5 hover:bg-amber-soft"
           >
             {t("ctaVolunteer")}
