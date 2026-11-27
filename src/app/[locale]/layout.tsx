@@ -9,6 +9,7 @@ import { siteUrl } from "@/lib/site";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { BottomNav } from "@/components/layout/bottom-nav";
+import { SplashScreen } from "@/components/layout/splash-screen";
 import "../globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -67,8 +68,10 @@ export default async function LocaleLayout({
   const clientMessages = { Nav: messages.Nav, Form: messages.Form, Support: messages.Support };
 
   return (
-    <html lang={locale} className={`${jakarta.variable} ${notoKannada.variable}`}>
+    // suppressHydrationWarning: the opening loader script may add data-splash before React loads.
+    <html lang={locale} className={`${jakarta.variable} ${notoKannada.variable}`} suppressHydrationWarning>
       <body className="min-h-dvh">
+        <SplashScreen />
         <a
           href="#main"
           className="sr-only z-50 rounded-full bg-walnut px-5 py-3 font-semibold text-cream focus:not-sr-only focus:fixed focus:top-3 focus:left-3"

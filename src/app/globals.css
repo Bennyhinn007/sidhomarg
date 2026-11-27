@@ -216,6 +216,29 @@
     to { opacity: 1; transform: none; }
   }
 
+  /* Opening loader (see components/layout/splash-screen.tsx). Hidden unless <html data-splash>. */
+  .splash {
+    display: none;
+  }
+  html[data-splash] {
+    overflow: hidden;
+  }
+  html[data-splash] .splash {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    background: #ffffff; /* the video's own background, so its edges are invisible */
+    animation: splash-out 0.5s ease 3s forwards;
+  }
+  @keyframes splash-out {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
   .logo-card {
     transform: perspective(900px) rotateY(-6deg) rotateX(3deg) scale(1.02);
     transition: transform 0.4s ease;

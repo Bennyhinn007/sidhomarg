@@ -121,6 +121,15 @@ Direct UPI payments with no gateway, API keys or backend. Settings live in `src/
   To show the official QR image instead, put it in `public/` and set `donate.qrImage`.
 - The site cannot verify payments, so it never shows a success message; donors confirm in their UPI app.
 
+## Opening loader
+
+`src/components/layout/splash-screen.tsx` plays `public/loading/loader.mp4` on a white screen for
+3 seconds, once per browsing session (per tab). A tiny inline script decides before the page paints,
+so returning visitors never see a flash. It is skipped for search engines and link previews, and for
+visitors whose device asks for reduced motion. A **Skip** button closes it early, and a CSS animation
+hides it even if the site's JavaScript fails. `loader-poster.webp` (the last frame) shows if a phone
+blocks autoplay. To change the length, edit `SPLASH_MS` and the `3s` delay in `globals.css`.
+
 ## Visit counter
 
 The footer shows the total number of website visits, shared by English and Kannada pages.

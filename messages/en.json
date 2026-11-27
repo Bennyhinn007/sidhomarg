@@ -49,6 +49,10 @@
     "english": "English",
     "kannada": "ಕನ್ನಡ"
   },
+  "Splash": {
+    "label": "Opening Sidhomarg Foundation",
+    "skip": "Skip"
+  },
   "Common": {
     "placeholder": "To be added",
     "photoComing": "Photo to be added",
